@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Compliance Violations - ShelfSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/store-details.css">
+</head>
+
+<body>
+
+    <header id="section-header" class="header-bar style_40">
+        <div class="header-left style_41">
+            <a href="#" class="logo-link style_42">
+                <img src="/page/09599eca-f41b-4d03-9ad5-588a7a32869b/images/140_729.svg" alt="ShelfSync Logo Icon"
+                    class="icon-xs style_43_img">
+                <span class="logo-text style_45">ShelfSync</span>
+            </a>
+            <nav class="header-nav style_46">
+                <a href="#" class="nav-item style_1">
+                    <span class="nav-text style_48">Retailers</span>
+                </a>
+                <a href="#" class="nav-item style_1 active">
+                    <span class="nav-text style_50">Compliance Violations</span>
+                </a>
+            </nav>
+        </div>
+
+    </header>
+
+    <main id="section-compliance-content" class="compliance-content-section style_3">
+        <div class="content-container">
+            <div class="title-area style_1">
+                <h1 class="page-title style_4">Compliance Violation</h1>
+            </div>
+
+            <div class="subtitle-and-filters-area style_8">
+                <p class="page-subtitle style_12">Review and resolve pricing discrepancies.</p>
+            </div>
+
+            <div class="violations-table-wrapper style_25">
+                <div class="table-scroll-container">
+                    <div class="table-header-row style_26">
+                        <div class="table-cell header-cell style_13_th retailor-id"><span class="style_27">Retailer
+                                ID</span></div>
+                        <div class="table-cell header-cell style_13_th product"><span class="style_27">Product</span>
+                        </div>
+                        <div class="table-cell header-cell style_13_th sku"><span class="style_27">SKU</span></div>
+                        <div class="table-cell header-cell style_13_th violation-type"><span class="style_27">Violation
+                                Type</span></div>
+                        <div class="table-cell header-cell style_13_th current-price"><span class="style_27">Current
+                                Price<br>(TL)</span></div>
+                        <div class="table-cell header-cell style_13_th regulated-price"><span class="style_27">Regulated
+                                Price</span></div>
+                        <div class="table-cell header-cell style_13_th profit-impact"><span class="style_27">Profit
+                                Impact</span></div>
+                        <div class="table-cell header-cell style_13_th actions"><span class="style_29">Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="table-body">
+                        {{#each products}}
+                        <div class="table-data-row style_30">
+                            <div class="table-cell style_31 retailor-id"><span
+                                    class="style_32">{{retailerId}}</span></div>
+                            <div class="table-cell style_31 product"><span class="style_32">{{name}}</span></div>
+                            <div class="table-cell style_31 sku"><span class="style_33">{{sku}}</span></div>
+                            <div class="table-cell style_31 violation-type">
+                                <span class="status-badge style_34"><span class="style_21">{{#if (eq statusClass
+                                        "status-over")}}Price Too High{{else}}Price Too Low{{/if}}</span></span>
+                            </div>
+                            <div class="table-cell style_31 current-price"><span class="style_33">{{price}}</span></div>
+                            <div class="table-cell style_31 regulated-price"><span
+                                    class="style_33">{{regulatedPrice}}</span></div>
+                            <div class="table-cell style_31 profit-impact"><span class="style_33">{{#if (eq statusClass
+                                    "status-over")}}-15%{{else}}+10%{{/if}}</span></div>
+                            <div class="table-cell style_31 actions">
+                                {{#if (eq statusClass "status-over")}}
+                                <form method="POST" action="/complain/{{../store._id}}">
+                                    <input type="hidden" name="productName" value="{{name}}">
+                                    <input type="hidden" name="sku" value="{{sku}}">
+                                    <input type="hidden" name="currentPrice" value="{{price}}">
+                                    <input type="hidden" name="regulatedPrice" value="{{regulatedPrice}}">
+                                    <input type="hidden" name="violationType" value="Price Too High">
+
+                                    <!-- Complain button only -->
+                                    <button type="submit" class="complain-button">Complain</button>
+                                </form>
+                                {{else}}
+                                <button class="complain-button" disabled style="opacity: 0.5;">Complain</button>
+                                {{/if}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="section-page-footer" class="page-footer style_5">
+        <div class="footer-content style_6">
+            <p class="footer-text style_7">2025 © ShelfSync</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

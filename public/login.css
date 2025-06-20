@@ -1,0 +1,129 @@
+/* signin.css */
+:root {
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --gray-50: #f7f9fc;
+    --gray-100: #e5e8eb;
+    --gray-300: #d1d5db;
+    --gray-600: #475569;
+    --bg-white: #ffffff;
+    --radius: 12px;
+    --spacing: 16px;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background: var(--gray-50);
+    color: var(--gray-600);
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue-600);
+}
+h1{
+    color: #1c1c1c;
+}
+button,
+input {
+    font-family: inherit;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 var(--spacing);
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #1c1c1c;
+}
+
+.settings-btn {
+    width: 40px;
+    height: 40px;
+    background: var(--gray-100);
+    border: none;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.auth-wrapper {
+    max-width: 600px;
+    margin: 48px auto;
+    padding: 0 var(--spacing);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px var(--spacing);
+    font-size: 16px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+    background: var(--bg-white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--blue-600);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--blue-600);
+    color: var(--bg-white);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--blue-700);
+}

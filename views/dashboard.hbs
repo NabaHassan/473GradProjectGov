@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShelfSync Retailers</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- Optional: reference to your stylesheet -->
+</head>
+
+<body>
+
+    <header id="section-header" class="site-header style_37">
+        <div class="header-left-nav style_38">
+            <a href="#home" class="logo-container style_39">
+                <div class="logo-icon-wrapper style_40">
+                    <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_921.svg" alt="ShelfSync Logo"
+                        class="logo-icon">
+                </div>
+                <span class="logo-text style_42">ShelfSync</span>
+            </a>
+            <nav class="main-navigation style_43">
+                
+                <a href="/store-details/{{this.storeId.toString()}}" class="nav-item">
+                    <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_936.svg" alt="Compliance Violations">
+                    <span class="style_45">Compliance Violations</span>
+                </a>
+
+                <a href="#retailers" class="nav-item active">
+                    <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_943.svg" alt="">
+                    <span class="style_48">Retailers</span>
+                </a>
+                
+            </nav>
+        </div>
+        <div class="header-right-controls style_50">
+            <div class="header-search-bar style_14">
+                <span class="search-icon-prefix style_15">
+                    <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_959.svg" alt="Search">
+                </span>
+                <div class="style_17">
+                    <input type="search" placeholder="Search" class="style_18">
+                </div>
+            </div>
+            <button class="notification-button style_52" aria-label="Notifications">
+                <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_966.svg" alt="Notifications">
+            </button>
+            <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/01710143bd795e312b71523a03557e1b2cb9e623.png"
+                alt="User Profile" class="profile-image style_54">
+        </div>
+    </header>
+
+    <main id="section-main-panel" class="main-panel-area style_3">
+        <div class="main-panel-content-wrapper">
+            <div class="page-title-section">
+                <div class="container-1190">
+                    <h1 class="page-title style_4">Retailers</h1>
+                </div>
+            </div>
+
+            <div class="retailers-block-container container-1190">
+                <div class="retailers-main">
+                    <div class="subtitle-wrapper style_9">
+                        <p class="subtitle style_12">Search active and inactive Retailers.</p>
+                    </div>
+                    <div class="main-search-wrapper style_13">
+                        <div class="search-bar style_14">
+                            <span class="search-icon-prefix style_15">
+                                <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_798.svg"
+                                    alt="Search Icon">
+                            </span>
+                            <div class="style_17">
+                                <input type="search" placeholder="Search" class="search-field style_18">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters-wrapper style_19">
+                        <button class="filter-btn style_20">
+                            <span class="style_21">Location</span>
+                            <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_808.svg"
+                                alt="Location filter icon">
+                        </button>
+                        <button class="filter-btn style_20">
+                            <span class="style_21">Retailer</span>
+                            <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_815.svg"
+                                alt="Retailer filter icon">
+                        </button>
+                        <button class="filter-btn style_20">
+                            <span class="style_21">Status</span>
+                            <img src="/page/a43b075a-4e4d-45a8-84af-0bb1fdb68a2d/images/140_822.svg"
+                                alt="Status filter icon">
+                        </button>
+                    </div>
+                    <div class="table-data-wrapper style_25 retailers-table">
+                        <div class="table-header style_26">
+                            <div class="style_13"><span class="style_27">Owner</span></div>
+                            <div class="style_13"><span class="style_27">Retailer ID</span></div>
+                            <div class="style_13"><span class="style_27">Retailer</span></div>
+                            <div class="style_13"><span class="style_27">Location</span></div>
+                            <div class="style_13"><span class="style_27">Contact</span></div>
+                            <div class="style_28"><span class="style_27">Status</span></div>
+                        </div>
+                        <div class="table-body">
+                            <!-- Table Rows Below (unchanged) -->
+                            {{#each stores}}
+                            <div class="table-row">
+                                <div class="style_13">{{this.username}}</div>
+                                <div class="style_13">{{this.nationalId}}</div>
+                                <div class="style_13">{{this.storeName}}</div>
+                                <div class="style_13">{{this.storeAddress}}</div>
+                                <div class="style_13">{{this.phone}}</div>
+                                <div class="style_13">{{this.status}}</div>
+                            </div>
+                            {{/each}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <footer id="section-footer" class="page-footer-container">
+                <div class="container-960">
+                    <div class="site-footer style_5">
+                        <p class="copyright style_7">2025 © ShelfSync</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+</body>
+
+</html>

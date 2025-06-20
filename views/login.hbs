@@ -1,0 +1,51 @@
+<!-- signin.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electronic Labelling System – Sign in</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <!-- Top navigation bar -->
+    <header class="topbar">
+        <div class="brand">
+            <img src="Img/logo.png" alt="Logo" />
+            ShelfSync
+        </div>
+        <button class="settings-btn" aria-label="Settings">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <!-- gear icon path -->
+                <path
+                    d="M12 15.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2Zm9.5-4.2-1.7-.7a7.94 7.94 0 0 0-.3-1l.9-1.5a.6.6 0 0 0-.1-.7l-1.4-1.4a.6.6 0 0 0-.7-.1l-1.5.9a7.94 7.94 0 0 0-1-.3l-.7-1.7a.6.6 0 0 0-.6-.4h-2a.6.6 0 0 0-.6.4l-.7 1.7a7.94 7.94 0 0 0-1 .3l-1.5-.9a.6.6 0 0 0-.7.1L4.7 8.5a.6.6 0 0 0-.1.7l.9 1.5a7.94 7.94 0 0 0-.3 1l-1.7.7a.6.6 0 0 0-.4.6v2c0 .3.2.5.4.6l1.7.7c.1.3.2.7.3 1l-.9 1.5a.6.6 0 0 0 .1.7l1.4 1.4c.2.2.5.2.7.1l1.5-.9c.3.1.7.2 1 .3l.7 1.7c.1.3.3.4.6.4h2c.3 0 .5-.2.6-.4l.7-1.7a7.94 7.94 0 0 0 1-.3l1.5.9c.3.2.5.1.7-.1l1.4-1.4c.2-.2.2-.5.1-.7l-.9-1.5c.1-.3.2-.7.3-1l1.7-.7a.6.6 0 0 0 .4-.6v-2c0-.3-.2-.5-.4-.6ZM12 16.8a4.8 4.8 0 1 1 0-9.6 4.8 4.8 0 0 1 0 9.6Z" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Sign-in form -->
+    <main class="auth-wrapper">
+        <section class="auth-left">
+            <h1>Welcome to ShelfSync</h1>
+            <p class="subtitle">Sign in to your account</p>
+
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+               <center> <p class="subtitle"><b>Contact Admin For Unsername And Password</b></p></center>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

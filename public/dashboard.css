@@ -1,0 +1,874 @@
+body {
+    margin: 0;
+    font-family: 'Public Sans', sans-serif;
+    background-color: #ffffff;
+    /* __2 from Desktop - 3 */
+    color: #0d141c;
+}
+
+.page-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* To prevent horizontal scroll from box shadows etc. */
+}
+
+/* Utility classes for centering content blocks */
+.container-1190 {
+    max-width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    /* Common padding for content alignment */
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.container-960 {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+
+/* Figma Style Classes */
+.style_1 {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.style_2 {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.style_3 {
+    background: linear-gradient(10deg, rgba(26, 128, 229, 0.46) 0%, rgba(232, 237, 242, 0.75) 67.55%, #f7f9fa 101.32%, #ffffff 135.09%);
+    overflow: hidden;
+}
+
+.style_4 {
+    color: #0d141c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 40px;
+    text-align: left;
+    margin: 0;
+}
+
+/* Adjusted margin */
+.style_5 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 20px;
+}
+
+.style_6 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.style_7 {
+    color: #4d7099;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.style_8 {
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.style_9 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+}
+
+.style_10 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.style_11 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.style_12 {
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    margin: 0;
+}
+
+.style_13 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    padding: 12px 16px;
+}
+
+.style_14 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+}
+
+/* Search bar group */
+.style_15 {
+    background-color: #ebedf2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    border-radius: 12px 0px 0px 12px;
+}
+
+/* Search icon container */
+.style_16 {
+    /* For SVG 140_798, handled by img tag */
+}
+
+.style_17 {
+    background-color: #ebedf2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+    border-radius: 0px 12px 12px 0px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+/* Search input container */
+.style_18 {
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+}
+
+/* Search input text */
+.style_19 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px 16px;
+}
+
+.style_20 {
+    background-color: #1980e5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Filter button */
+.style_21 {
+    color: #f7fafc;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+/* Filter button text */
+.style_22 {
+    /* For SVG 140_808 */
+}
+
+.style_23 {
+    /* For SVG 140_815 */
+}
+
+.style_24 {
+    /* For SVG 140_822 */
+}
+
+.style_25 {
+    background-color: #f7fafc;
+    border: 1px solid #cfdbe8;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+/* Table container */
+.style_26 {
+    background-color: #e8edf2;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Table header row */
+.style_27 {
+    color: #0d141c;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+/* Table header text */
+.style_28 {
+    background-color: #e8edf2;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+}
+
+/* Last table header cell */
+.style_29 {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #e5e8eb;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Table data row */
+.style_29:last-child {
+    border-bottom: none;
+}
+
+.style_30 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px;
+    flex: 1;
+    text-align: center;
+}
+
+/* Table data cell */
+.style_31 {
+    color: #0d141c;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/* Table cell text (owner, ID) */
+.style_32 {
+    color: #4d7099;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/* Table cell text (retailer, loc, contact) */
+.style_33 {
+    background-color: #ee1b1e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Active status badge (red) */
+.style_34 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.style_35 {
+    color: #f7fafc;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+/* Status badge text */
+.style_36 {
+    background-color: #39c52f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Inactive status badge (green) */
+.style_37 {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #e5e8eb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    min-height: 40px;
+}
+
+/* Header container */
+.style_38 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Header left part */
+.style_39 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+/* Logo link */
+.style_40 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Max changed to flex-start */
+.style_41 {
+    /* For SVG 140_921 */
+}
+
+.style_42 {
+    color: #1980e5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: left;
+}
+
+/* Logo text */
+.style_43 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Nav links container */
+.style_44 {
+    /* For SVG 140_929 */
+}
+
+.style_45 {
+    color: #0d141c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: left;
+}
+
+/* Nav link text */
+.style_46 {
+    /* For SVG 140_936 */
+}
+
+.style_47 {
+    /* For SVG 140_943 */
+}
+
+.style_48 {
+    color: #1980e5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: left;
+}
+
+/* Active nav link text */
+.style_49 {
+    /* For SVG 140_950 */
+}
+
+.style_50 {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Header right part, changed justify-content */
+.style_51 {
+    /* For SVG 140_959 */
+}
+
+.style_52 {
+    background-color: #ebedf2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+/* Notification button */
+.style_53 {
+    /* For SVG 140_966 */
+}
+
+.style_54 {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* Profile image */
+
+/* Custom styles for layout and responsiveness */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.nav-item.active {
+    /* background-color: #e0effb; /* Optional: active background for nav item */
+}
+
+.nav-item.active .style_45 {
+    /* If text is normally style_45 */
+    color: #1980e5;
+    /* Active color from style_48 */
+}
+
+.header-search-bar .style_15 {
+    /* Icon part of header search */
+    padding-right: 8px;
+    /* Ensure icon is visible */
+}
+
+.header-search-bar .style_17 {
+    /* Input part of header search */
+    padding-left: 8px;
+}
+
+.header-search-bar input.style_18 {
+    min-width: 120px;
+    /* Give some base width to search input */
+}
+
+.table-cell-content {
+    /* Allows text to wrap within table cells if needed */
+    word-break: break-word;
+}
+
+@media (max-width: 1200px) {
+    .style_37 {
+        /* Header container */
+        padding: 12px 20px;
+    }
+
+    .style_38 {
+        /* Header left part */
+        gap: 16px;
+    }
+
+    .style_43 {
+        /* Nav links container */
+        gap: 10px;
+    }
+
+    .style_45,
+    .style_48 {
+        /* Nav link text */
+        font-size: 14px;
+    }
+
+    .page-title-section .container-1190 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .retailers-block-container .retailers-main {
+        padding-left: 0;
+        /* Handled by parent padding */
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .style_38 {
+        /* Header left part */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .style_43 {
+        /* Nav links container */
+        flex-wrap: wrap;
+    }
+
+    .style_4 {
+        /* Page title */
+        font-size: 36px;
+    }
+
+    .style_19 {
+        /* Filters area */
+        flex-direction: column;
+        align-items: stretch;
+        /* Make buttons full width */
+    }
+
+    .style_19 .style_20 {
+        /* Filter buttons */
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .retailers-table .style_26,
+    .retailers-table .style_29 {
+        /* Table header and rows */
+        /* On smaller screens, table might need to become cards or scroll horizontally */
+        /* For now, allow horizontal scroll within the table container */
+    }
+
+    .retailers-table {
+        overflow-x: auto;
+    }
+
+    .style_26>div,
+    .style_29>div {
+        /* Table cells */
+        min-width: 120px;
+        /* Give cells a minimum width */
+    }
+}
+
+@media (max-width: 768px) {
+    .style_37 {
+        /* Header container */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .style_50 {
+        /* Header right part */
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header-search-bar {
+        flex-grow: 1;
+    }
+
+    .style_4 {
+        /* Page title */
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .page-title-section {
+        padding-top: 20px;
+        /* Adjust spacing */
+    }
+
+    .main-panel-content-wrapper {
+        padding-top: 20px;
+        /* Adjust spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .style_42 {
+        /* Logo text */
+        font-size: 18px;
+    }
+
+    .style_45,
+    .style_48 {
+        /* Nav link text */
+        font-size: 13px;
+    }
+
+    .nav-item {
+        padding: 6px 8px;
+    }
+
+    .style_4 {
+        /* Page title */
+        font-size: 28px;
+    }
+
+    .style_12 {
+        /* Subtitle */
+        font-size: 13px;
+    }
+
+    .style_18 {
+        /* Search input text */
+        font-size: 14px;
+    }
+
+    .style_21 {
+        /* Filter button text */
+        font-size: 13px;
+    }
+
+    .style_27,
+    .style_31,
+    .style_32,
+    .style_35 {
+        /* Table texts */
+        font-size: 13px;
+    }
+}
+
+/* Specific adjustments based on Figma coordinates */
+.page-title-section {
+    padding-top: 9px;
+    /* (y: -17713) - (parent y: -17722) */
+}
+
+.page-title-section .container-1190 .style_4 {
+    /* Title text 140:784 (x:23197) vs content block 140:788 (x:23187)
+       Page edge 23062. Content block starts 125px from edge. Title starts 135px from edge.
+       So title is 10px to the right of content block's alignment.
+       If container-1190 provides the 125px offset, then title needs 10px margin/padding.
+    */
+    margin-left: 10px;
+    padding-top: 21px;
+    /* (y text: -17683) - (y container: -17713) - 9px parent padding = 21px */
+    padding-bottom: (86px - 56px - 30px)=0px;
+    /* container height - text height - top_offset */
+}
+
+.retailers-block-container {
+    /* margin-top: 0; (y: -17627) - (prev_end_y: -17627) */
+}
+
+.retailers-main {
+    /* Corresponds to 140:788 */
+    /* Children are stacked. Spacing between them is based on their own padding or explicit margins. */
+}
+
+.subtitle-wrapper.style_9 {
+    /* 140:789 */
+    /* y: -17617. Parent 140:788 y: -17627. So 10px from top of parent.
+       style_9 has padding-top: 16px. So content starts 10+16=26px from parent top.
+       This seems like the 10px is the margin for the block itself.
+    */
+    margin-top: 10px;
+}
+
+.main-search-wrapper.style_13 {
+    /* 140:793 */
+    /* y: -17564. Prev 140:789 ends -17617+53 = -17564. So 0px margin. */
+    margin-top: 0;
+}
+
+.filters-wrapper.style_19 {
+    /* 140:802 */
+    /* y: -17492. Prev 140:793 ends -17564+72 = -17492. So 0px margin. */
+    margin-top: 0;
+}
+
+.table-data-wrapper.style_25 {
+    /* 140:824 */
+    /* y: -17413. Prev 140:802 ends -17492+56 = -17436. Margin-top: 23px. */
+    margin-top: 23px;
+}
+
+.page-footer-container {
+    margin-top: -20px;
+    /* (y: -16885) - (prev_block_end_y: -16865) */
+    position: relative;
+    /* For z-index if needed, though not specified for overlap */
+    z-index: 1;
+    /* Ensure it's above if content below has bg */
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* This ensures the cells are spaced evenly across the row */
+    align-items: center;
+    /* This aligns the content vertically */
+    padding: 12px 16px;
+}
+
+.style_13 {
+    flex: 1;
+    /* Allow each cell to take equal space */
+    padding: 8px 16px;
+    text-align: left;
+    /* Align text to the left */
+    word-wrap: break-word;
+    /* In case the text overflows */
+}
+
+/* Optional: Increase width of certain columns if needed */
+.style_13:nth-child(1) {
+    flex-basis: 20%;
+}
+
+.style_13:nth-child(2) {
+    flex-basis: 15%;
+}
+
+.style_13:nth-child(3) {
+    flex-basis: 25%;
+}
+
+.style_13:nth-child(4) {
+    flex-basis: 30%;
+}
+
+.style_13:nth-child(5) {
+    flex-basis: 20%;
+}
+
+.style_13:nth-child(6) {
+    flex-basis: 10%;
+}
+
+
+/* Table column widths - approximate, adjust as needed */
+.retailers-table .table-header>div,
+.retailers-table .table-body .table-row>div {
+    box-sizing: border-box;
+}
+
+.retailers-table .table-header>div:nth-child(1),
+/* Owner */
+.retailers-table .table-body .table-row>div:nth-child(1) {
+    flex-basis: 15%;
+    min-width: 120px;
+}
+
+.retailers-table .table-header>div:nth-child(2),
+/* Retailer ID */
+.retailers-table .table-body .table-row>div:nth-child(2) {
+    flex-basis: 15%;
+    min-width: 100px;
+}
+
+.retailers-table .table-header>div:nth-child(3),
+/* Retailer */
+.retailers-table .table-body .table-row>div:nth-child(3) {
+    flex-basis: 20%;
+    min-width: 150px;
+}
+
+.retailers-table .table-header>div:nth-child(4),
+/* Location */
+.retailers-table .table-body .table-row>div:nth-child(4) {
+    flex-basis: 25%;
+    min-width: 200px;
+}
+
+.retailers-table .table-header>div:nth-child(5),
+/* Contact */
+.retailers-table .table-body .table-row>div:nth-child(5) {
+    flex-basis: 15%;
+    min-width: 120px;
+}
+
+.retailers-table .table-header>div:nth-child(6),
+/* Status */
+.retailers-table .table-body .table-row>div:nth-child(6) {
+    flex-basis: 10%;
+    min-width: 100px;
+}
+
+
+.filter-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.logo-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.nav-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.search-icon-prefix img {
+    width: 24px;
+    height: 24px;
+}
+
+.notification-button img {
+    width: 20px;
+    height: 20px; }

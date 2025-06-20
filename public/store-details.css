@@ -1,0 +1,770 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #0d141c;
+}
+
+
+
+
+.page-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    /* Matches Desktop - 3 background */
+    overflow: hidden;
+    /* From style_2 on Desktop - 3 */
+}
+
+/* Helper class for visually hidden elements, if needed */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Common link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Icon styling */
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-sm {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-xs {
+    width: 16px;
+    height: 16px;
+}
+
+/* Button styling for filters */
+.filter-button {
+    background-color: #1980e5;
+    /* style_20 */
+    color: #f7fafc;
+    /* style_21 */
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 8px 16px;
+    /* Approximate from style_20 (padding-left/right varies) */
+    border-radius: 12px;
+    /* style_20 */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* style_20 */
+    border: none;
+    cursor: pointer;
+}
+
+.filter-button img {
+    margin-left: 0px;
+    /* SVG is on the right in design */
+}
+
+/* Table action links */
+.action-link-normal {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #5c738a;
+    /* style_36 */
+}
+
+.action-link-highlight {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ED1A1C;
+    /* textStyle_38 fill */
+    cursor: pointer;
+}
+
+.action-link-highlight:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+
+    .header-nav,
+    .header-actions .search-bar-global {
+        display: none;
+        /* Basic responsive: hide nav and search on smaller screens */
+    }
+
+    .violations-table-wrapper {
+        overflow-x: auto;
+        /* Allow table to scroll on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-bar {
+        padding: 12px 20px !important;
+        /* Reduce padding */
+    }
+
+    .compliance-content-section .content-container {
+        padding: 20px !important;
+    }
+
+    .page-title {
+        font-size: 32px !important;
+        /* Reduce title size */
+        line-height: 36px !important;
+    }
+
+    .filter-buttons-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .table-header-row {
+            background-color: #e8edf2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* Space out header items */
+            border-bottom: 1px solid #d4dbe3;
+            width: max-content;
+        }
+
+        th {
+    padding: 20px 30px; /* Increased padding for more spacing between headers */
+    text-align: left;
+    justify-content: space-evenly;
+    width: 250px;
+    background-color: #f8f8f8; /* Light background for headers */
+}
+
+/* Adjust header text style */
+.style_27 {
+    color: #0f1417;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;}
+
+    .table-data-row {
+        min-width: 900px;
+        /* Ensure table content has enough space before scrolling */
+    }
+}
+
+/* CSS from section:header */
+.header-bar {
+    /* style_40 */
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #e5e8eb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+}
+
+.header-left {
+    /* style_41 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo-link {
+    /* style_42 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.style_43_img {
+    /* style_44 is imageSrc, style_43 is container */
+    width: 17px;
+    /* from SVG bbox */
+    height: 18px;
+    /* from SVG bbox */
+}
+
+.logo-text {
+    /* style_45 */
+    color: #1980e5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.header-nav {
+    /* style_46 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    /* style_1 for container frames */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Inferred from visual, not in style_1 */
+    padding: 8px 12px;
+    /* Inferred for clickable area */
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.nav-item:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-item.active .nav-text {
+    /* style_50 */
+    color: #1980e5;
+}
+
+
+.style_8_img {
+    /* Common for icon containers with overflow:hidden */
+    display: block;
+}
+
+.nav-text {
+    /* style_48 */
+    color: #0d141c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.header-right {
+    /* style_53 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    /* Adjusted from 32px to fit better */
+}
+
+.search-bar-global {
+    /* style_14 */
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    background-color: #ebedf2;
+    /* from children */
+    overflow: hidden;
+    /* from style_17 and style_15 having radius */
+}
+
+.style_11_parent {
+    /* parent of search icon and input wrappers */
+    background-color: rgba(0, 0, 0, 0);
+    /* style_11 */
+}
+
+.search-icon-wrapper {
+    /* style_15 */
+    background-color: #ebedf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    /* border-radius: 12px 0 0 12px; / / Handled by parent */
+}
+
+.search-input-wrapper {
+    /* style_17 */
+    background-color: #ebedf2;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+    /* border-radius: 0 12px 12px 0; / / Handled by parent */
+}
+
+.search-input-global {
+    /* style_18 for text */
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 120px;
+    /* Approximate */
+}
+
+.search-input-global::placeholder {
+    color: #5c738a;
+}
+/* Style for the complain button */
+.complain-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Disabled button style */
+.complain-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.icon-button {
+    /* style_55 */
+    background-color: #ebedf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-button {
+    /* style_57 */
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    /* 50% for circle */
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.profile-avatar-img {
+    /* from style_57 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CSS from section:compliance-content */
+.compliance-content-section {
+    /* style_3 */
+    background: linear-gradient(10deg, rgba(26, 128, 229, 0.46) 0%, rgba(232, 237, 242, 0.75) 67.55%, #f7f9fa 101.32%, #ffffff 135.09%);
+    overflow: hidden;
+    padding-bottom: 40px;
+    /* To ensure footer is visible and space below table */
+}
+
+.content-container {
+    max-width: 1273px;
+    /* Width of 140:580 */
+    margin: 0 auto;
+    padding: 23px 0;
+    /* Top padding from 140:574 y vs 140:573 y. Bottom padding for footer. */
+}
+
+.title-area {
+    /* style_1, container for title */
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 0;
+    /* Title text 140:576 is at x:21657, container 140:574 at x:21574. This is handled by content-container margin. */
+    margin-bottom: 16px;
+    /* Space below title, from 140:581 y vs 140:574 bottom */
+}
+
+.page-title {
+    /* style_4 */
+    color: #0d141c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    /* Adjusted from 40px for better readability */
+    text-align: left;
+    margin: 0;
+    /* Reset default h1 margin */
+}
+
+.subtitle-and-filters-area {
+    /* style_8, container for subtitle, search, filters, table */
+    background-color: rgba(0, 0, 0, 0);
+    overflow: visible;
+    /* Override hidden if it clips shadows or dropdowns */
+}
+
+.subtitle-area {
+    /* style_9 */
+    padding: 16px 0;
+    /* Top/bottom padding from style_9. L/R padding handled by content-container */
+}
+
+.regulated-price-input {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.page-subtitle {
+    /* style_12 */
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    margin: 0;
+}
+
+.search-bar-violations {
+    /* style_13 for padding */
+    padding: 12px 0;
+}
+
+.search-bar-inner {
+    /* style_14 */
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    background-color: #ebedf2;
+    /* from children */
+    overflow: hidden;
+}
+
+.search-icon-wrapper-violations {
+    /* style_15 */
+    background-color: #ebedf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    /* Adjusted for 48px height */
+}
+
+.style_16_img {
+    /* SVG icon */
+    display: block;
+}
+
+.search-input-wrapper-violations {
+    /* style_17 */
+    background-color: #ebedf2;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+    flex-grow: 1;
+}
+
+.search-input-violations {
+    /* style_18 for text */
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.search-input-violations::placeholder {
+    color: #5c738a;
+}
+
+.filter-buttons-group {
+    /* style_19 */
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+
+.style_22_img,
+.style_23_img,
+.style_24_img {
+    /* SVG icons in filter buttons */
+    display: block;
+}
+
+.violations-table-wrapper {
+    /* style_25 */
+    background-color: #fafafa;
+    border: 1px solid #d4dbe3;
+    border-radius: 12px;
+    overflow: hidden;
+    /* This will clip, so table-scroll-container handles scrolling */
+    margin-top: 12px;
+    /* Spacing from filters */
+    justify-content: auto;
+}
+
+.table-scroll-container {
+    overflow-x: auto;
+    /* Enable horizontal scrolling for the table content */
+}
+
+.table-header-row {
+    /* style_26 */
+    background-color: #e8edf2;
+    display: flex;
+    flex-direction: row;
+    /* gap: -5px; Figma specific, handle with cell styling */
+    border-bottom: 1px solid #d4dbe3;
+    /* Add separation from body */
+    justify-content:  auto ;
+}
+
+.table-data-row {
+    /* style_30 */
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #e5e8eb;
+    /* Changed from full border to border-bottom */
+    display: flex;
+    flex-direction: row;
+    /* gap: -5px; Figma specific */
+}
+
+.table-data-row:last-child {
+    border-bottom: none;
+}
+
+.table-cell {
+    display: flex;
+    justify-content: center;
+    /* Default from style_31 */
+    align-items: center;
+    /* Default from style_31 */
+    padding: 12px 16px;
+    /* Base padding from style_13 / style_28 / style_31 */
+    text-align: center;
+    /* Default from text styles */
+    box-sizing: border-box;
+    flex-shrink: 0;
+    /* Prevent shrinking by default, manage with flex-basis */
+}
+
+.table-cell.header-cell {
+    padding-top: 12px;
+    /* style_13 / style_28 */
+    padding-bottom: 12px;
+    /* style_13 / style_28 */
+    justify-content: auto;
+}
+
+.table-cell.style_31 {
+    /* For data cells */
+    padding-top: 8px;
+    /* style_31 */
+    padding-bottom: 8px;
+    /* style_31 */
+    min-height: 63px;
+    /* Approximate height for actions content */
+    align-items: center;
+    /* from style_31 */
+}
+
+/* Column specific widths based on Figma node widths */
+.table-cell.retailor-id {
+    flex-basis: 153px;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.table-cell.product {
+    flex-basis: 153px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.table-cell.sku {
+    flex-basis: 108px;
+}
+
+.table-cell.violation-type {
+    flex-basis: 172px;
+}
+
+.table-cell.current-price {
+    flex-basis: 125px;
+}
+
+.table-cell.regulated-price {
+    flex-basis: 142px;
+}
+
+.table-cell.profit-impact {
+    flex-basis: 119px;
+}
+
+.table-cell.date-violation {
+    flex-basis: 154px;
+}
+
+.table-cell.actions {
+    flex-basis: 153px;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.style_27 {
+    /* Table header text */
+    color: #0f1417;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.style_29 {
+    /* Table header actions text */
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.style_32 {
+    /* Table cell primary text */
+    color: #0f1417;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.style_33 {
+    /* Table cell secondary text */
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.style_36 {
+    /* Table cell date/actions text (bold part) */
+    color: #5c738a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    /* Base style for actions text */
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.status-badge {
+    display: inline-flex;
+    /* To contain text properly */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    /* Adjusted from 16px to fit better */
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #f7fafc;
+    /* style_21 */
+}
+
+.status-badge.style_34 {
+    /* Price Too High */
+    background-color: #ee1b1e;
+}
+
+.status-badge.style_39 {
+    /* Price Too Low */
+    background-color: #39c52f;
+}
+
+.table-cell.actions span,
+.table-cell.actions a {
+    display: block;
+    /* Make each part of action take full width if needed or wrap */
+    line-height: 1.5;
+}
+
+.table-cell.actions>span:not(:last-child),
+.table-cell.actions>a:not(:last-child) {
+    margin-bottom: 0px;
+    /* Space between lines in actions */
+}
+
+/* CSS from section:page-footer */
+.page-footer {
+    /* style_5 */
+    background-color: rgba(0, 0, 0, 0);
+    /* Transparent, relies on main section gradient */
+    display: flex;
+    flex-direction: column;
+    /* As per style_5, though content is centered by style_6 */
+    /* gap: 24px; Not relevant here */
+    padding: 40px 20px;
+    /* style_5 */
+    margin-top: 40px;
+    /* Ensure space above footer if content is short */
+}
+
+.footer-content {
+    /* style_6 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 920px;
+    /* From 140:578 */
+    margin: 0 auto;
+    /* Center the 920px wide content */
+}
+
+.footer-text {
+    /* style_7 */
+    color: #4d7099;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0; }
