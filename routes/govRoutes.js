@@ -81,7 +81,7 @@ router.post('/complain/:storeId', async (req, res) => {
         const Product = storesDB.model(`Product_${storeInfo.storeId}`, ProductSchema, collectionName);
 
         const foundProduct = await Product.findOne({
-            name: { $regex: new RegExp(`^${productName.trim()}$`, 'i') }
+            productName: { $regex: new RegExp(`^${productName.trim()}$`, 'i') }
         });
 
         console.log("🔍 Searching for product:", productName);
@@ -114,7 +114,7 @@ router.post('/complain/:storeId', async (req, res) => {
                 read: false,
                 productId: foundProduct._id,
                 storeId: retailer.storeId,
-                productName: foundProduct.name || productName,
+                productName: foundProduct.productName || productName,
                 sku: foundProduct.sku || "N/A",
                 violationType: "Price Too High",
                 currentPrice: foundProduct.price?.toString() || "0",
